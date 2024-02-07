@@ -8,11 +8,11 @@ this is the landing page of the computer science honor society at westchester ac
 
 ## **reference links:** ##
 
-Sign Up
+[Sign Up](https://docs.google.com/forms/d/e/1FAIpQLSektOENLINXNFTD2H7sXnjmMVYOU122TUXnvKWMX0TDvGgLTg/viewform)
 
-CSHS GitHub
+[CSHS GitHub](https://github.com/WAIScshs)
 
-Instagram
+[Instagram](https://www.instagram.com/wais.cshs/?hl=en)
 
 
 ## **Upcoming events:** ##
