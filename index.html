@@ -5,26 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAIS CSHS Landing Page</title>
     <style>
+
+        .container3{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            background-color: #30383b;
+
+        }
+        li {
+            float:left;
+        }
+        li a, .dropbtn{
+            display: inline-block;
+            font-family: 'dited', sans-serif;
+            color: white;
+            text-align: center;
+            padding: 26px 28px;
+            text-decoration: none;
+            
+        }
+        li a:hover, .dropdown:hover, .dropbtn {
+            background-color: rgb(255, 114, 21);
+
+        }
+        li.dropdown{
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(60, 141, 141);
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a{
+            color: balck;
+            padding: 12px 16px;
+            text-decoration: none;
+            display:block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {background-color: rgb(28, 101, 143);}
+
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+
+        .text{
+            justify-content: left;
+            text-decoration: none;
+            font-size: larger;
+        }
+        .image {
+            justify-items: left;
+            padding-left: 0.5%;
+            text-decoration: none;
+        }
+        
         body {
             background-color: #06171E; /* Set background color of the body */
-            color: white; /* Set text color to white */
+            color: rgb(255, 255, 255); /* Set text color to white */
             font-family: Arial, sans-serif; /* Set font family */
         }
         
         @font-face {
             font-family: 'Dited';
-            src: url('https://dl.dafont.com/dl/?f=dited') format('opentype'); /* Replace 'DITED.OTF' with the actual font file name */
+            src: url('Dited(1).woff') format('woff'); /* Replace 'DITED.OTF' with the actual font file name */
+            
             /* Add more src lines for different file formats like woff, woff2, etc. if available */
+            /* note that some files like OTF won't show on some broswers ex: OTF on firefox don't work together */
         }
+
         .container {
             max-width: 800px; /* Set maximum width for the container */
             margin: 0 auto; /* Center the container horizontally */
             text-align: center; /* Center the content horizontally */ /* Add padding to the container */
         }
+        @font-face {
+            font-family: 'Dosis';
+            src: url(Dosis-Light.woff) format(woff);
+            
+        }
+        .text1{ /*this is goes tot eh welcome to the WAIS CSHS */
+            font-family: 'dosis', sans-serif;
+
+        }
+        .text2{
+
+            font-family: 'dited', sans-serif;
+            
+
+        }
+        .text3{
+            font-family: 'dited', sans-serif;
+            size: 50;
+            color: rgb(32,194,14)
+
+        }
         .container2 {
             max-width: 800px; /* Set maximum width for the container */
             margin: 0 auto; /* Center the container horizontally */
-            text-align: left; /* Center the content horizontally */
+            text-align: center; /* Center the content horizontally */
+            padding-bottom: 100px;
 
         }
         
@@ -49,7 +142,7 @@
         }
         h2 {
             color: white;
-            text-align: left;
+            
         }
          li {
             color: white;
@@ -78,33 +171,81 @@
           background-color: transparent;
           text-decoration: underline;
         }
-    </style>
+    </style>  
 </head>
 <body>
+
+
+    </div>
+    <div class="container3">
+        <div class = "text">
+            <a href="index.html"><h1>WAIS CSHS</h1>
+        </div>        
+        
+        <div class="image">
+            <a href="index.html"><img src="Logo7.png" width="70" height="70"></a>
+        </div>
+
+
+    </div>
+<ul>
+    <li><a href="page2.html">About us</a></li>
+    <li><a href="pluh">Events</a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Projects</a>
+        <div class="dropdown-content">
+            <a href="#">Project Help</a>
+            <a href="#">Member Profolio's </a>
+
+        </div>
+
+    </li>
+    
+    
+</ul>
     <div class="container">
         <img src="Logo7.png" alt="WAIS CSHS" width="250" hight="250">
+
+
+
         <center><h1>WAIS CSHS Landing Page</h1></center>
         <img src="Line1.png" alt="" width="250" hight="250">
-        <center><p>This is the landing page of the Computer Science Honor Society at Westchester Academy. Here you can find any links from meetings or upcoming events. This also lists any of the upcoming events or meetings and a contact list if you want to get in touch.</p></center>
-
+        <div class = "text1">
+            <center><p>This is the landing page of the Computer Science Honor Society at Westchester Academy. Here you can find any links from meetings or upcoming events. This also lists any of the upcoming events or meetings and a contact list if you want to get in touch.</p></center>
+        </div>
         <br>
-        <center><h2>Reference Links</h2></center>
-        
-            <a href="https://forms.gle/K5PE1YuJGVX9bAVa6">Sign Up</a> - <a href="https://github.com/WAIScshs">CSHS GitHub</a> - <a href="https://www.instagram.com/wais.cshs/?hl=en">Instagram</a>
+        <div class='text2'>
+            <center><h2>Reference Links</h2></center>
+        </div>
+        <a href="https://forms.gle/K5PE1YuJGVX9bAVa6">Sign Up</a> - <a href="https://github.com/WAIScshs">CSHS GitHub</a> - <a href="https://www.instagram.com/wais.cshs/?hl=en">Instagram</a>
+    </div>
         <div class="container2">
-
-        <br>
-        <h2> Upcoming Events </h2>
-            <p>- First Meeting (Date: tbd) -</p>
+            
             <br>
-        <h2> Contact </h2>
-     <p>For help or questions contact the following:</p>
-        <p>Mr. Wegscheid: Shaun.Wegscheid@springbranchisd.com</p>
-        <p>Henson Liga: henson.liga@gmail.com</p>
-        <p>Paisley Tang: paisleytww@gmail.com</p>
+            <div class="text2">
+                <h2> Upcoming Events </h2>
+            </div>
+                <div class="text1">
+                <p>- First Meeting (Date: tbd) -</p>
+                </div>
+                <br>
+            <div class="text2">
+                <h2> Contact </h2>
+            </div>
+            <div class= "text1">
+                <p>For help or questions contact the following:</p>
+                <p>Mr. Wegscheid: Shaun.Wegscheid@springbranchisd.com</p>
+                <p>Henson Liga: henson.liga@gmail.com</p>
+                <p>Paisley Tang: paisleytww@gmail.com</p>
+            </div>
+        </div>
 </div>
 
 </body>
        
 
+</html>
+
+</body>
+       
 </html>
