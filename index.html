@@ -4,174 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAIS CSHS Landing Page</title>
-    <style>
-
-        .container3{
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            
-        }
-        ul{
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-            background-color: #30383b;
-
-        }
-        li {
-            float:left;
-        }
-        li a, .dropbtn{
-            display: inline-block;
-            font-family: 'dited', sans-serif;
-            color: white;
-            text-align: center;
-            padding: 26px 28px;
-            text-decoration: none;
-            
-        }
-        li a:hover, .dropdown:hover, .dropbtn {
-            background-color: rgb(255, 114, 21);
-
-        }
-        li.dropdown{
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: rgb(60, 141, 141);
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a{
-            color: balck;
-            padding: 12px 16px;
-            text-decoration: none;
-            display:block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {background-color: rgb(28, 101, 143);}
-
-        .dropdown:hover .dropdown-content{
-            display: block;
-        }
-
-        .text{
-            justify-content: left;
-            text-decoration: none;
-            font-size: larger;
-        }
-        .image {
-            justify-items: left;
-            padding-left: 0.5%;
-            text-decoration: none;
-        }
-        
-        body {
-            background-color: #06171E; /* Set background color of the body */
-            color: rgb(255, 255, 255); /* Set text color to white */
-            font-family: Arial, sans-serif; /* Set font family */
-        }
-        
-        @font-face {
-            font-family: 'Dited';
-            src: url('Dited(1).woff') format('woff'); /* Replace 'DITED.OTF' with the actual font file name */
-            
-            /* Add more src lines for different file formats like woff, woff2, etc. if available */
-            /* note that some files like OTF won't show on some broswers ex: OTF on firefox don't work together */
-        }
-
-        .container {
-            max-width: 800px; /* Set maximum width for the container */
-            margin: 0 auto; /* Center the container horizontally */
-            text-align: center; /* Center the content horizontally */ /* Add padding to the container */
-        }
-        @font-face {
-            font-family: 'Dosis';
-            src: url(Dosis-Light.woff) format(woff);
-            
-        }
-        .text1{ /*this is goes tot eh welcome to the WAIS CSHS */
-            font-family: 'Dosis', sans-serif;
-    
-        }
-        .text2{
-
-            font-family: 'Dited', sans-serif;
-            font-size: medium;
-
-        }
-        .text3{
-            font-family: 'dited', sans-serif;
-            size: 50;
-            color: rgb(32,194,14)
-
-        }
-        .container2 {
-            max-width: 800px; /* Set maximum width for the container */
-            margin: 0 auto; /* Center the container horizontally */
-            text-align: center; /* Center the content horizontally */
-            padding-bottom: 100px;
-
-        }
-        
-        .container p {
-            text-align: center; /* Align text within the container to the left */
-        }
-
-        .container img {
-            display: block; /* Make the image a block element */
-            margin: 0 auto; /* Center the image horizontally within its container */
-            margin-top: 20px; /* Add margin to the top of the image */
-        }
-
-        .container h2 {
-            color: white;
-            text-align: center; /* Align text within the container to the left */
-        }
-
-        h1 {
-            font-family: 'Dited', sans-serif; /* Apply the custom font to the title */
-            color: white;
-        }
-        h2 {
-            color: white;
-            
-        }
-         li {
-            color: white;
-            text-align: left;
-        }
-        a:link {
-          color: white;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        
-        a:visited {
-          color: white;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        
-        a:hover {
-          color: white;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-        
-        a:active {
-          color: white;
-          background-color: transparent;
-          text-decoration: underline;
-        }
-    </style>  
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
 
@@ -183,19 +16,19 @@
         </div>        
         
         <div class="image">
-            <a href="index.html"><img src="Logo7.png" width="70" height="70"></a>
+            <a href="index.html"><img src="images/Logo7.png" width="70" height="70"></a>
         </div>
 
 
     </div>
 <ul>
-    <li><a href="page2.html">About us</a></li>
-    <li><a href="pluh">Events</a></li>
+    <li><a href="AboutUs.html">About us</a></li>
+    <li><a href="Events.html">Events</a></li>
     <li class="dropdown">
         <a href="javascript:void(0)" class="dropbtn">Projects</a>
         <div class="dropdown-content">
-            <a href="#">Project Help</a>
-            <a href="#">Member Profolio's </a>
+            <a href="ProjectHelp.html">Project Help</a>
+            <a href="MemberPortfolio.html">Member Profolio's </a>
 
         </div>
 
@@ -204,12 +37,12 @@
     
 </ul>
     <div class="container">
-        <img src="Logo7.png" alt="WAIS CSHS" width="250" hight="250">
+        <img src="images/Logo7.png" alt="WAIS CSHS" width="250" hight="250">
 
 
 
         <center><h1>WAIS CSHS Landing Page</h1></center>
-        <img src="Line1.png" alt="" width="250" hight="250">
+        <img src="images/Line1.png" alt="" width="250" hight="250">
         <div class = "text1">
             <center><p>This is the landing page of the Computer Science Honor Society at Westchester Academy. Here you can find any links from meetings or upcoming events. This also lists any of the upcoming events or meetings and a contact list if you want to get in touch.</p></center>
         </div>
@@ -223,23 +56,16 @@
             
             <br>
             <div class="text2">
-                <h2> Upcoming Events </h2>
+                <h2> Meeting Schedule </h2>
             </div>
             <div class="text2">
-                <p> <h2> - 2nd Meeting (Date: Thursday, September 26, 2024) - </h2>
+                <p> <h2> - Meetings will be hosted every other Thursday - </h2>
                 <div class="text3">
                     <p> <h3>( note: Members will be choosing their inducktion ducks )</h3></p>
                 </div>
 
             </div>
             <br>
-            <div class="text2">
-                <h2> - Reminders -</h2>
-
-            </div>
-            <div class="text2">
-                <p> Meetings are tuesdays and Thursday</p>
-            </div>
             <div class="text2">
                 <h2> Contact </h2>
             </div>
@@ -256,8 +82,3 @@
        
 
 </html>
-
-</body>
-       
-</html>
-
