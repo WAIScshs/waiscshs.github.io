@@ -124,6 +124,7 @@ a {
   animation-duration: 2s;
   animation-delay: -0.5s;
   animation-timing-function: ease-in;
+  will-change: opacity;
 }
 
 #hex-layer1 {
@@ -137,6 +138,10 @@ a {
   animation-duration: 2.5s;
   animation-delay: 2s;
   animation-timing-function: ease-in;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 #hex-layer2 {
@@ -150,6 +155,10 @@ a {
   animation-duration: 3s;
   animation-delay: 2.3s;
   animation-timing-function: ease-in;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 #hex-layer3 {
@@ -163,6 +172,10 @@ a {
   animation-duration: 4s;
   animation-delay: 2.6s;
   animation-timing-function: ease-in;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 #hex-layer4 {
@@ -176,6 +189,10 @@ a {
   animation-duration: 5s;
   animation-delay: 2.9s;
   animation-timing-function: ease-in;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
 }
 
 #hex-logo {
@@ -189,4 +206,6 @@ a {
   animation-duration: 1s;
   animation-delay: 2s;
   animation-timing-function: ease-in;
+  will-change: opacity;
+  transform: translateZ(0);
 }
