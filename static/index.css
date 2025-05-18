@@ -21,11 +21,11 @@
 
 @keyframes zoom-in {
   from {
-    transform: scale(1);
+    transform: scale3d(1, 1, 1);
   }
-
+  
   to {
-    transform: scale(15);
+    transform: scale3d(12, 12, 1);
   }
 }
 
