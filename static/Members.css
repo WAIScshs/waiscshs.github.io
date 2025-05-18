@@ -1,80 +1,80 @@
-
-:root {
-    font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
-  }
-  .mask1 {
-    -webkit-mask-image: url(images/logo.png);
-    mask-image: url(images/logo.png);
-    mask-position: center;
-    mask-size: 20%;
-    mask-repeat: no-repeat;
-    filter: url(#fluted);
-  }
-  
-  
-  .flutedImg {
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    filter: url(#fluted);
-  }
-  
-  body {
-    background: white;
-    height: 100svh;
-    display: grid;
-    place-items: center;
-  
-    font-family: "Manrope", sans-serif;
-    color: white;
-  
-    grid-template-areas: "stack";
-  
-    > * {
-      grid-area: stack;
-    }
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  main {
-    display: grid;
-    place-items: center;
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    grid-template-areas: "stack";
-  
-    filter: url(#ambilight);
-  
-    & > * {
-      grid-area: stack;
-    }
-  }
-  
-  img {
-    /*   position: absolute; */
-    z-index: -1;
-    /*   inset: 0; */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    overflow: hidden;
-  }
-  
-  svg {
-    position: absolute;
-    width: 0;
-    height: 0;
+@keyframes fade-in {
+  from {
     opacity: 0;
-    pointer-events: none;
   }
-  
-  [fx="fluted"] {
-    backdrop-filter: url(#fluted);
+
+  to {
+    opacity: 1;
   }
+}
+
+body {
+  font-family: 'Open Sans Condensed';
+  font-weight: 10;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  -webkit-mask-image: url(images/logo.png);
+  mask-image: url(images/logo.png);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+#logo {
+  position: absolute;
+  top: 0.5%;
+  left: 0.5%;
+  height: 10%;
+  width: 10%;
+}
+
+#aboutUs {
+  position: absolute;
+  top: 0.5%;
+  left: 15%;
+  height: 10%;
+  width: 30%;
+}
+
+#members {
+  position: absolute;
+  top: 0.5%;
+  left: 30%;
+  height: 10%;
+  width: 30%;
+}
+
+#projects {
+  position: absolute;
+  top: 0.5%;
+  left: 45%;
+  height: 10%;
+  width: 30%;
+}
+
+#contactUs {
+  position: absolute;
+  top: 0.5%;
+  right: -10%;
+  height: 10%;
+  width: 30%;
+}
+
+#main {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: fade-in;
+  animation-duration: 2s;
+  animation-delay: -0.5s;
+  animation-timing-function: ease-in;
+}
