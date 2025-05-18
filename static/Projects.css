@@ -1,0 +1,80 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: 'Open Sans Condensed';
+  font-weight: 10;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo {
+  -webkit-mask-image: url(images/logo.png);
+  mask-image: url(images/logo.png);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+#logo {
+  position: absolute;
+  top: 0.5%;
+  left: 0.5%;
+  height: 10%;
+  width: 10%;
+}
+
+#aboutUs {
+  position: absolute;
+  top: 0.5%;
+  left: 15%;
+  height: 10%;
+  width: 30%;
+}
+
+#members {
+  position: absolute;
+  top: 0.5%;
+  left: 30%;
+  height: 10%;
+  width: 30%;
+}
+
+#projects {
+  position: absolute;
+  top: 0.5%;
+  left: 45%;
+  height: 10%;
+  width: 30%;
+}
+
+#contactUs {
+  position: absolute;
+  top: 0.5%;
+  right: -10%;
+  height: 10%;
+  width: 30%;
+}
+
+#main {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: fade-in;
+  animation-duration: 2s;
+  animation-delay: -0.5s;
+  animation-timing-function: ease-in;
+}

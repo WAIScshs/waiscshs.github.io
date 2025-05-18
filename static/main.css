@@ -1,0 +1,192 @@
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(15);
+  }
+}
+
+body {
+  font-family: 'Open Sans Condensed';
+  font-weight: 10;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.hex-mask {
+  -webkit-mask-image: url(images/Hexagon.svg);
+  mask-image: url(images/Hexagon.svg);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+.layer {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  height: 50%;
+  width: 50%;
+}
+
+.logo {
+  -webkit-mask-image: url(images/logo.png);
+  mask-image: url(images/logo.png);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+#logo {
+  position: absolute;
+  top: 0.5%;
+  left: 0.5%;
+  height: 10%;
+  width: 10%;
+}
+
+#aboutUs {
+  position: absolute;
+  top: 0.5%;
+  left: 15%;
+  height: 10%;
+  width: 30%;
+}
+
+#members {
+  position: absolute;
+  top: 0.5%;
+  left: 30%;
+  height: 10%;
+  width: 30%;
+}
+
+#projects {
+  position: absolute;
+  top: 0.5%;
+  left: 45%;
+  height: 10%;
+  width: 30%;
+}
+
+#contactUs {
+  position: absolute;
+  top: 0.5%;
+  right: -10%;
+  height: 10%;
+  width: 30%;
+}
+
+#Welcome {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+}
+
+#main {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation: fade-in;
+  animation-duration: 2s;
+  animation-delay: -0.5s;
+  animation-timing-function: ease-in;
+}
+
+#hex-layer1 {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  animation-name: zoom-in;
+  animation-duration: 2.5s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in;
+}
+
+#hex-layer2 {
+  z-index: 2;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  animation-name: zoom-in;
+  animation-duration: 3s;
+  animation-delay: 2.3s;
+  animation-timing-function: ease-in;
+}
+
+#hex-layer3 {
+  z-index: 3;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  height: 60%;
+  width: 60%;
+  animation-name: zoom-in;
+  animation-duration: 4s;
+  animation-delay: 2.6s;
+  animation-timing-function: ease-in;
+}
+
+#hex-layer4 {
+  z-index: 4;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  height: 40%;
+  width: 40%;
+  animation-name: zoom-in;
+  animation-duration: 5s;
+  animation-delay: 2.9s;
+  animation-timing-function: ease-in;
+}
+
+#hex-logo {
+  z-index: 5;
+  position: absolute;
+  top: 43.25%;
+  left: 43.25%;
+  height: 13.5%;
+  width: 13.5%;
+  animation-name: fade-out;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-timing-function: ease-in;
+}
