@@ -31,6 +31,12 @@
 
 body {
   font-family: 'Open Sans Condensed';
+  font-weight: 10;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .hex-mask {
@@ -47,6 +53,64 @@ body {
   left: 25%;
   height: 50%;
   width: 50%;
+}
+
+.logo {
+  -webkit-mask-image: url(images/logo.png);
+  mask-image: url(images/logo.png);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
+#logo {
+  position: absolute;
+  top: 0.5%;
+  left: 0.5%;
+  height: 10%;
+  width: 10%;
+}
+
+#aboutUs {
+  position: absolute;
+  top: 0.5%;
+  left: 15%;
+  height: 10%;
+  width: 30%;
+}
+
+#members {
+  position: absolute;
+  top: 0.5%;
+  left: 30%;
+  height: 10%;
+  width: 30%;
+}
+
+#projects {
+  position: absolute;
+  top: 0.5%;
+  left: 45%;
+  height: 10%;
+  width: 30%;
+}
+
+#contactUs {
+  position: absolute;
+  top: 0.5%;
+  right: -10%;
+  height: 10%;
+  width: 30%;
+}
+
+#Welcome {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
 }
 
 #main {
@@ -70,7 +134,7 @@ body {
   height: 100%;
   width: 100%;
   animation-name: zoom-in;
-  animation-duration: 2s;
+  animation-duration: 2.5s;
   animation-delay: 2s;
   animation-timing-function: ease-in;
 }
@@ -84,7 +148,7 @@ body {
   width: 80%;
   animation-name: zoom-in;
   animation-duration: 3s;
-  animation-delay: 2s;
+  animation-delay: 2.3s;
   animation-timing-function: ease-in;
 }
 
@@ -97,7 +161,7 @@ body {
   width: 60%;
   animation-name: zoom-in;
   animation-duration: 4s;
-  animation-delay: 2s;
+  animation-delay: 2.6s;
   animation-timing-function: ease-in;
 }
 
@@ -110,7 +174,7 @@ body {
   width: 40%;
   animation-name: zoom-in;
   animation-duration: 5s;
-  animation-delay: 2s;
+  animation-delay: 2.9s;
   animation-timing-function: ease-in;
 }
 
@@ -125,9 +189,4 @@ body {
   animation-duration: 1s;
   animation-delay: 2s;
   animation-timing-function: ease-in;
-  -webkit-mask-image: url(images/logo.png);
-  mask-image: url(images/logo.png);
-  mask-position: center;
-  mask-size: contain;
-  mask-repeat: no-repeat;
 }
