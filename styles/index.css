@@ -33,7 +33,7 @@
   animation-name: zoom-in;
   animation-duration: 3s;
   animation-delay: 2s;
-  animation-timing-function: cubic-bezier(1, 0, 1, 1);;
+  animation-timing-function: cubic-bezier(1, 0, 1, 1);
 }
 
 #hex-logo {
