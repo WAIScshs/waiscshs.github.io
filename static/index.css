@@ -25,7 +25,20 @@
   }
 
   to {
-    transform: scale(15);
+    transform: scale(10);
+  }
+}
+
+
+@keyframes zoom-in-mask {
+  from {
+    mask-size: 50% 50%;
+    -webkit-mask-size: 50% 50%;
+  }
+
+  to {
+    mask-size: 500% 500%;
+    -webkit-mask-size: 500% 500%;
   }
 }
 
@@ -43,8 +56,21 @@ a {
   -webkit-mask-image: url(images/Hexagon.svg);
   mask-image: url(images/Hexagon.svg);
   mask-position: center;
-  mask-size: contain;
   mask-repeat: no-repeat;
+  mask-size: 50% 50%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation-name: zoom-in-mask;
+  animation-duration: 2.5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .layer {
@@ -134,7 +160,7 @@ a {
   height: 100%;
   width: 100%;
   animation-name: zoom-in;
-  animation-duration: 2.5s;
+  animation-duration: 2.3s;
   animation-delay: 2s;
   animation-timing-function: ease-in;
 }
@@ -147,7 +173,7 @@ a {
   height: 80%;
   width: 80%;
   animation-name: zoom-in;
-  animation-duration: 3s;
+  animation-duration: 2.5s;
   animation-delay: 2.3s;
   animation-timing-function: ease-in;
 }
@@ -160,8 +186,8 @@ a {
   height: 60%;
   width: 60%;
   animation-name: zoom-in;
-  animation-duration: 4s;
-  animation-delay: 2.6s;
+  animation-duration: 2.8s;
+  animation-delay: 2.5s;
   animation-timing-function: ease-in;
 }
 
@@ -173,8 +199,8 @@ a {
   height: 40%;
   width: 40%;
   animation-name: zoom-in;
-  animation-duration: 5s;
-  animation-delay: 2.9s;
+  animation-duration: 2.6s;
+  animation-delay: 2.8s;
   animation-timing-function: ease-in;
 }
 
