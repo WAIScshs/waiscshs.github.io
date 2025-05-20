@@ -26,12 +26,28 @@ a {
   mask-repeat: no-repeat;
 }
 
+.wais-logo {
+  -webkit-mask-image: url(images/wais-logo.svg);
+  mask-image: url(images/wais-logo.svg);
+  mask-position: center;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
 #logo {
   position: absolute;
   top: 0.5%;
   left: 0.5%;
   height: 10%;
   width: 10%;
+}
+
+#wais-logo {
+  position: absolute;
+  top: 0.5%;
+  left: 7%;
+  height: 5%;
+  width: 5%;
 }
 
 #aboutUs {
