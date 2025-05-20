@@ -216,3 +216,17 @@ a {
   animation-delay: 2s;
   animation-timing-function: ease-in;
 }
+
+#animation-welcome {
+  z-index: 6;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 25%;
+  animation-name: fade-out;
+  animation-duration: 0.5s;
+  animation-delay: 2s;
+}
