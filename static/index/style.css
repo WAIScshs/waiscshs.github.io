@@ -25,3 +25,41 @@ canvas {
     justify-content: center;
     z-index: 0;
 }
+
+.container img {
+    width: 50%;
+    height: 50%;
+}
+
+#gas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+}
+
+#gas img {
+    position: absolute;
+    display: block;
+    object-fit: fill;
+    width: 150vw;
+    height: 100vh;
+    left: -25vw;
+}
+
+#gas canvas {
+    position: absolute;
+    width: 150vw;
+    height: 100vh;
+    left: -25vw;
+    bottom: -25vh;
+}
+
+#vector2 {
+    bottom: -40vh;
+}
+
+#vector1 {
+    bottom: -25vh;
+}
