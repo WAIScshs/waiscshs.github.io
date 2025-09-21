@@ -55,6 +55,7 @@ canvas {
     height: 100vh;
     left: -30vw;
     bottom: -25vh;
+    filter: saturate(200%);
 }
 
 #vector2 {
