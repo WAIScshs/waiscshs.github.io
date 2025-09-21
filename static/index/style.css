@@ -46,6 +46,7 @@ canvas {
     width: 150vw;
     height: 100vh;
     left: -25vw;
+    filter: saturate(200%);
 }
 
 #gas canvas {
