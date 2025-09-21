@@ -1,40 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>WAIS CSHS</title>
-      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-      <link rel="stylesheet" href="static/index.css">
-      <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
-      <link rel="icon" type="image/png" href="static/images/logo.png">
-      <script src="static/scripts/index.js"></script>
-  </head>
-  <body>
-    <div id="animatedSection">
-      <h1 id="animation-welcome" class="hex-layer">A LOCAL CHAPTER FOR WAIS</h1>
-      <img class="hex-mask"  src="static/images/background.png">
-      <div id="hex-layer1" class="hex-layer">
-        <img class="layer" style="z-index: 1;" src="static/images/TransHex.svg">
-      </div>
-      <div id="hex-layer2" class="hex-layer">
-        <img class="layer" style="z-index: 1;" src="static/images/TransHex.svg">
-      </div>
-      <div id="hex-layer3" class="hex-layer">
-        <img class="layer" style="z-index: 1;" src="static/images/TransHex.svg">
-      </div>
-      <div id="hex-layer4" class="hex-layer">
-        <img class="layer"  src="static/images/Hexagon.svg">
-      </div>
-      <img src="static/images/o.png" id="hex-logo" class="hex-layer logo">
-    </div>
-
-    <div id="main">
-        <h1 id="Welcome" style="text-align: center;">Welcome to the WAIS CSHS Home Page</h3>
-        <img id="logo" class="logo" src="static/images/o.png" alt="logo">
-        <img id="wais-logo" class="wais-logo" src="static/images/o.png" alt="wais-logo">
-        <a href="AboutUs.html" id="aboutUs"><h1>About Us</h1></a>
-        <a href="Members.html" id="members"><h1>Members</h1></a>
-        <a href="Projects.html" id="projects"><h1>Projects</h1></a>
-        <a href="ContactUs.html" id="contactUs"><h1>Contact Us</h1></a>
-    </div>
-  </body>
+    <head>
+        <title>WAIS CSHS</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="static/index/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <img src="images/logo.svg" alt="logo">
+        </div>
+        <canvas id="gas"></canvas>
+        <script src="static/index/script.js"></script>
+    </body>
 </html>
