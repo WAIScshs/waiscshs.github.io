@@ -64,3 +64,26 @@ canvas {
 #vector1 {
     bottom: -25vh;
 }
+
+#top-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20%;
+    width: 100%;
+    z-index: 1;
+}
+
+#top-bar h4 {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: large;
+    color: white;
+}
+
+#top-bar a {
+    position: absolute;
+}
+
+#github {
+    right: 2%;
+}
