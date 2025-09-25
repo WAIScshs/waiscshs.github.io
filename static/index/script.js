@@ -15,6 +15,10 @@ window.onload = function() {
         const rect = canvas.getBoundingClientRect();
         mouseX = e.pageX - rect.left;
         mouseY = e.pageY - rect.top;
+
+        mouseX = ((mouseX - canvas.width/2)/2) + canvas.width/2;
+        mouseY = ((mouseY - canvas.height/2)/2) + canvas.height/2;
+
         canvas.draw(texture)
             .zoomBlur(parseInt(mouseX), parseInt(mouseY), 0.2)
             .update();
