@@ -1,19 +1,22 @@
 window.onload = function() {
-    try {
-        const image = document.getElementById("vector1");
-        var canvas = fx.canvas();
-        var texture = canvas.texture(image);
-        
-        image.parentNode.insertBefore(canvas, image);
-        image.parentNode.removeChild(image);
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    const image = document.getElementById("vector1");
+    var canvas = fx.canvas();
+    var texture = canvas.texture(image);
     
-        window.addEventListener("mousemove", function(e) {
-            const rect = canvas.getBoundingClientRect();
-            const x = e.pageX - rect.left;
-            const y = e.pageY - rect.top;
-            canvas.draw(texture).swirl(x, y, 200, 4).update();
-        });
-    } catch (error) {
-        console.log(error);
-    }
+    image.parentNode.insertBefore(canvas, image);
+    image.parentNode.removeChild(image);
+    canvas.draw(texture).update();
+    
+    window.addEventListener("mousemove", function(e) {
+        const rect = canvas.getBoundingClientRect();
+        mouseX = e.pageX - rect.left;
+        mouseY = e.pageY - rect.top;
+        canvas.draw(texture)
+            .zoomBlur(parseInt(mouseX), parseInt(mouseY), 0.2)
+            .update();
+    });
 }
