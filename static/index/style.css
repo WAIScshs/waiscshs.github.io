@@ -59,6 +59,18 @@ canvas {
     box-shadow: 5px 5px 5px 5px;
 }
 
+#windows img {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    right: 5%;
+    top: 15%;
+}
+
+#windows div {
+    overflow-y: scroll;
+}
+
 #gas {
     position: absolute;
     bottom: 0;
@@ -116,7 +128,7 @@ canvas {
 
 #top-bar svg{
     position: absolute;
-    left: 20px;
+    left: 10px;
     top: 20px;
 }
 

@@ -1,3 +1,8 @@
+function loadText(text) {
+    document.getElementById("")
+}
+
+
 window.onload = function() {
     let mouseX = 0;
     let mouseY = 0;
@@ -23,9 +28,28 @@ window.onload = function() {
             .update();
     });
 
-    document.getElementById("windowBackground").addEventListener("click", function (event) {
+
+    const windowBackground = document.getElementById("windowBackground");
+
+    windowBackground.addEventListener("click", function (event) {
         if (event.target.id === "windowBackground") {
-            document.getElementById("windowBackground").style.display = "none";
+            windowBackground.style.display = "none";
         }
+    });
+
+    const projects = document.getElementById("projects");
+    const members = document.getElementById("members");
+    const contact = document.getElementById("contact");
+
+    projects.addEventListener("click", function() {
+        windowBackground.style.display = "block";
+    });
+
+    members.addEventListener("click", function() {
+        windowBackground.style.display = "block";
+    });
+
+    contact.addEventListener("click", function() {
+        windowBackground.style.display = "block";
     });
 }
