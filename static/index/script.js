@@ -38,10 +38,14 @@ window.onload = function() {
 
 
     const windowBackground = document.getElementById("windowBackground");
+    const windowD = document.getElementById("windows");
 
     windowBackground.addEventListener("click", function (event) {
         if (event.target.id === "windowBackground") {
-            windowBackground.style.display = "none";
+            windowD.classList.remove("show");
+            setTimeout(function() {
+                windowBackground.style.display = "none";
+            }, 500);
         }
     });
 
@@ -53,11 +57,15 @@ window.onload = function() {
     projects.addEventListener("click", function() {
         loadText("");
         windowBackground.style.display = "block";
+        windowD.offsetHeight;
+        windowD.classList.add("show");
     });
 
     members.addEventListener("click", function() {
         loadText("");
         windowBackground.style.display = "block";
+        windowD.offsetHeight;
+        windowD.classList.add("show");
     });
 
     const firstMeeting = new Date('2025-9-18');
@@ -68,10 +76,14 @@ window.onload = function() {
         const meetingInfo = `<h1>Meeting Schedule</h1><br>We will be hosting our next meeting on ${nextMeetingDate.toLocaleDateString()}<br><br>${daysUntilMeeting} days untill the next CSHS meeting<br><br>We host our meetings every other week`;
         loadText(meetingInfo);
         windowBackground.style.display = "block";
+        windowD.offsetHeight;
+        windowD.classList.add("show");
     });
 
     contact.addEventListener("click", function() {
         loadText("");
         windowBackground.style.display = "block";
+        windowD.offsetHeight;
+        windowD.classList.add("show");
     });
 }
