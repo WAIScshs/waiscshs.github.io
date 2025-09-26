@@ -1,5 +1,4 @@
 window.onload = function() {
-
     let mouseX = 0;
     let mouseY = 0;
 
@@ -22,5 +21,11 @@ window.onload = function() {
         canvas.draw(texture)
             .zoomBlur(parseInt(mouseX), parseInt(mouseY), 0.2)
             .update();
+    });
+
+    document.getElementById("windowBackground").addEventListener("click", function (event) {
+        if (event.target.id === "windowBackground") {
+            document.getElementById("windowBackground").style.display = "none";
+        }
     });
 }
