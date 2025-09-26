@@ -58,7 +58,7 @@ canvas {
     padding: 10px;
     box-shadow: 5px 5px 5px 5px;
     transform: translateY(-200%);
-    transition: transform 1s;
+    transition: transform 1s ease-out;
 }
 
 #windows.show {
