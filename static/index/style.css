@@ -69,6 +69,7 @@ canvas {
 
 #windows div {
     overflow-y: scroll;
+    scrollbar-width: none;
     position: absolute;
     left: 5%;
     top: 15%;
