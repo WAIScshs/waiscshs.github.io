@@ -73,7 +73,7 @@ window.onload = function() {
         const today = new Date();
         const nextMeetingDate = getNextMeeting(firstMeeting, today);
         const daysUntilMeeting = Math.ceil((nextMeetingDate - today) / (1000 * 60 * 60 * 24));
-        const meetingInfo = `<h1>Meeting Schedule</h1><br>We will be hosting our next meeting on ${nextMeetingDate.toLocaleDateString()}<br><br>${daysUntilMeeting} days untill the next CSHS meeting<br><br>We host our meetings every other week`;
+        const meetingInfo = `<h1>Meeting Schedule</h1><br>We will be hosting our next meeting on ${nextMeetingDate.toLocaleDateString()}<br><br>${daysUntilMeeting} days untill the next CSHS meeting<br><br>We host our meetings every other week in room A125`;
         loadText(meetingInfo);
         windowBackground.style.display = "block";
         windowD.offsetHeight;
@@ -81,7 +81,7 @@ window.onload = function() {
     });
 
     contact.addEventListener("click", function() {
-        loadText("");
+        loadText("<h1>Contact Info</h1><br>Mr. Wegscheid - shaun.wegscheid@springbranchisd.com<br><br>Mrs. Wegscheid - Cherly.Wegscheid@springbranchisd.com<br><br>Henson Liga - ligahen000@mysbisd.org");
         windowBackground.style.display = "block";
         windowD.offsetHeight;
         windowD.classList.add("show");

@@ -2,7 +2,7 @@ body {
     margin: 0;
     background: black;
     overflow: hidden;
-    font-family: "IBM Plex Mono", sans-serif;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 a {
@@ -81,22 +81,22 @@ canvas {
 #windows img {
     position: absolute;
     height: 50%;
-    width: 50%;
+    width: 45%;
     right: 5%;
     top: 15%;
     filter: blur(2px);
 }
 
 #windows div {
-    overflow-y: scroll;
+    overflow: scroll;
     scrollbar-width: none;
     position: absolute;
     left: 5%;
     top: 15%;
     height: 70%;
-    width: 35%;
+    width: 40%;
     color: white;
-    font-family: "IBM Plex Mono", sans-serif;
+    font-family: "IBM Plex Mono", monospace;
 }
 
 #gas {
@@ -145,7 +145,7 @@ canvas {
 
 #top-bar h4 {
     position: absolute;
-    font-family: "IBM Plex Mono", sans-serif;
+    font-family: "IBM Plex Mono", monospace;
     font-size: smaller;
     color: white;
 }
