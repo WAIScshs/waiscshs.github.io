@@ -51,10 +51,12 @@ window.onload = function() {
     const contact = document.getElementById("contact");
 
     projects.addEventListener("click", function() {
+        loadText("");
         windowBackground.style.display = "block";
     });
 
     members.addEventListener("click", function() {
+        loadText("");
         windowBackground.style.display = "block";
     });
 
@@ -69,6 +71,7 @@ window.onload = function() {
     });
 
     contact.addEventListener("click", function() {
+        loadText("");
         windowBackground.style.display = "block";
     });
 }
