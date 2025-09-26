@@ -1,5 +1,5 @@
 function loadText(text) {
-    document.getElementById("")
+    document.getElementById("windowText").innerHTML = text;
 }
 
 
@@ -39,6 +39,7 @@ window.onload = function() {
 
     const projects = document.getElementById("projects");
     const members = document.getElementById("members");
+    const meetings = document.getElementById("meetings")
     const contact = document.getElementById("contact");
 
     projects.addEventListener("click", function() {
@@ -46,6 +47,10 @@ window.onload = function() {
     });
 
     members.addEventListener("click", function() {
+        windowBackground.style.display = "block";
+    });
+
+    meetings.addEventListener("click", function() {
         windowBackground.style.display = "block";
     });
 

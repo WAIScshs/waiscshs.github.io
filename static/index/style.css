@@ -118,7 +118,7 @@ canvas {
 #top-bar h4 {
     position: absolute;
     font-family: "IBM Plex Sans", sans-serif;
-    font-size: large;
+    font-size: smaller;
     color: white;
 }
 
@@ -129,21 +129,25 @@ canvas {
 #top-bar svg{
     position: absolute;
     left: 10px;
-    top: 20px;
+    top: 12px;
 }
 
 #github {
-    right: 100px;
+    right: 80px;
 }
 
 #projects {
-    left: 60px;
+    left: 50px;
 }
 
 #members {
-    left: 160px;
+    left: 130px;
+}
+
+#meetings {
+    left: 210px;
 }
 
 #contact {
-    left: 260px;
+    left: 290px;
 }
