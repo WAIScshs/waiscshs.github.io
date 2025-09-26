@@ -2,6 +2,14 @@ function loadText(text) {
     document.getElementById("windowText").innerHTML = text;
 }
 
+function getNextMeeting(refDate, today) {
+    const msPerDay = 24 * 60 * 60 * 1000;
+    const daysInBetween = 14;
+    const daysSinceRef = Math.floor((today - refDate) / msPerDay);
+    const daysUntilNext = daysInBetween - (daysSinceRef % daysInBetween);
+    const nextMeeting = new Date(today.getTime() + (daysUntilNext * msPerDay));
+    return nextMeeting;
+}
 
 window.onload = function() {
     let mouseX = 0;
@@ -50,7 +58,13 @@ window.onload = function() {
         windowBackground.style.display = "block";
     });
 
+    const firstMeeting = new Date('2025-9-18');
     meetings.addEventListener("click", function() {
+        const today = new Date();
+        const nextMeetingDate = getNextMeeting(firstMeeting, today);
+        const daysUntilMeeting = Math.ceil((nextMeetingDate - today) / (1000 * 60 * 60 * 24));
+        const meetingInfo = `<h1>Meeting Schedule</h1><br>We will be hosting our next meeting on ${nextMeetingDate.toLocaleDateString()}<br><br>${daysUntilMeeting} days untill the next CSHS meeting<br><br>We host our meetings every other week`;
+        loadText(meetingInfo);
         windowBackground.style.display = "block";
     });
 
