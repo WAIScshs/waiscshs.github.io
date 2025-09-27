@@ -106,7 +106,7 @@ window.onload = function() {
 
         loadText(
             [henson, paisley, samuel, marcus, sergio, siddhant],
-            ["images/Member/2Q.png", "images/Member/rando.jpeg", "images/Member/Sam.jpg", "images/Member/Marcus.png", "images/Member/Sergio.jpg", "images/Member/rando.jpeg"]
+            ["images/Member/rando.jpeg", "images/Member/rando.jpeg", "images/Member/Sam.jpg", "images/Member/Marcus.png", "images/Member/Sergio.jpg", "images/Member/rando.jpeg"]
         );
         windowBackground.style.display = "block";
         windowD.offsetHeight;
