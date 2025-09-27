@@ -116,7 +116,7 @@ canvas {
     width: 150vw;
     height: 100vh;
     left: -25vw;
-    filter: saturate(200%);
+    filter: saturate(100%);
 }
 
 #gas canvas {
@@ -125,7 +125,7 @@ canvas {
     height: 100vh;
     left: -30vw;
     bottom: -25vh;
-    filter: saturate(200%);
+    filter: saturate(100%);
 }
 
 #vector2 {
