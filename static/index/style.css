@@ -2,7 +2,6 @@ body {
     margin: 0;
     background: black;
     overflow: hidden;
-    font-family: "IBM Plex Mono", monospace;
 }
 
 a {
@@ -71,7 +70,7 @@ canvas {
     padding: 10px;
     box-shadow: 5px 5px 5px 5px;
     transform: translateY(-200%);
-    transition: transform 1s ease-out;
+    transition: transform 1s ease-in-out;
 }
 
 #windows.show {
@@ -181,4 +180,34 @@ canvas {
 
 #contact {
     left: 290px;
+}
+
+.ibm-plex-mono-thin {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-mono-extralight {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-mono-light {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-sans-regular {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
