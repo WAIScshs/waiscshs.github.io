@@ -81,7 +81,7 @@ window.onload = function() {
     });
 
     contact.addEventListener("click", function() {
-        loadText("<h1>Contact Info</h1><br>Mr. Wegscheid - shaun.wegscheid@springbranchisd.com<br><br>Mrs. Wegscheid - Cherly.Wegscheid@springbranchisd.com<br><br>Henson Liga - ligahen000@mysbisd.org");
+        loadText("<h1>Contact Info</h1><br>Mr. Wegscheid: shaun.wegscheid@springbranchisd.com<br><br>Mrs. Wegscheid: Cherly.Wegscheid@springbranchisd.com<br><br>Henson Liga: ligahen000@mysbisd.org");
         windowBackground.style.display = "block";
         windowD.offsetHeight;
         windowD.classList.add("show");
