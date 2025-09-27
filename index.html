@@ -1,37 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <title>CSHS</title>
-      <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-      <link rel="stylesheet" href="static/index.css">
-      <link href='https://fonts.googleapis.com/css?family=Open Sans Condensed:300' rel='stylesheet'>
-      <script src="static/scripts/index.js"></script>
-  </head>
-  <body>
-    <div id="animatedSection">
-      <img class="hex-mask"  src="static/images/background.png">
-      <div id="hex-layer1" class="hex-layer">
-        <img class="layer" style="z-index: 1;" src="static/images/TransHex.svg">
-      </div>
-      <div id="hex-layer2" class="hex-layer">
-        <img class="layer" style="z-index: 1;" src="static/images/TransHex.svg">
-      </div>
-      <div id="hex-layer3" class="hex-layer">
-        <img class="layer" style="z-index: 1;" src="static/images/TransHex.svg">
-      </div>
-      <div id="hex-layer4" class="hex-layer">
-        <img class="layer"  src="static/images/Hexagon.svg">
-      </div>
-      <img src="static/images/o.png" id="hex-logo" class="hex-layer logo">
-    </div>
+    <head>
+        <title>WAIS CSHS</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="static/index/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
+        <script src="glfx.js"></script>
+    </head>
+    <body>
+        <div id="top-bar">
+            <a href="https://github.com/WAIScshs/waiscshs.github.io" id="github"><h4>GITHUB</h4></a>
+            <svg width="40" height="25">
+                <circle cx="20" cy="10" r="8" fill="white" stroke="black" stroke-width="2" />
+            </svg>
+            <h4 id="projects">PROJECTS</h4>
+            <h4 id="members">MEMBERS</h4>
+            <h4 id="meetings">MEETINGS</h4>
+            <h4 id="contact">CONTACT</h4>
+        </div>
 
-    <div id="main">
-        <h1 id="Welcome" style="text-align: center;">Welcome to the CSHS Home Page</h3>
-        <img id="logo" class="logo" src="static/images/o.png" alt="logo">
-        <a href="AboutUs.html" id="aboutUs"><h1>About Us</h1></a>
-        <a href="Members.html" id="members"><h1>Members</h1></a>
-        <a href="Projects.html" id="projects"><h1>Projects</h1></a>
-        <a href="ContactUs.html" id="contactUs"><h1>Contact Us</h1></a>
-    </div>
-  </body>
+        <div class="container">
+            <img src="images/logo.svg" alt="logo">
+            <h1>A new chapter for wais</h1>
+        </div>
+
+        <div id="gas">
+            <img id="vector1" src="images/vector2.svg" crossorigin="anonymous" alt="vector2">
+            <img id="vector2" src="images/vector1.svg"  alt="vector1">
+        </div>
+
+        <div id="windowBackground">
+            <div id="windows">
+                <div id="windowText">
+
+                </div>
+                <img id="windowImage" src="images/Frame 31.png" alt="background">
+            </div>
+        </div>
+
+        <script src="static/index/script.js"></script>
+    </body>
 </html>
