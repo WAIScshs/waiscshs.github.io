@@ -1,5 +1,29 @@
-function loadText(text) {
-    document.getElementById("windowText").innerHTML = text;
+let currentIndex = 0;
+let texts = []
+let images = []
+
+function loadText(text, image = ["images/Frame 31.png"]) {
+    currentIndex = 0;
+    if (Array.isArray(text)) {
+        texts = text;
+    } else if (typeof text === "string") {
+        texts = [text];
+    } else {
+        texts = [""]
+    }
+
+    if (Array.isArray(image)) {
+        images = image;
+    } else if (typeof image === "string") {
+        images = [image];
+    }
+    
+    loadFrame();
+}
+
+function loadFrame() {
+    document.getElementById("windowText").innerHTML = texts[currentIndex];
+    document.getElementById("windowImage").src = images[currentIndex] === "" ? "images/Frame 31.png" : images[currentIndex];
 }
 
 function getNextMeeting(refDate, today) {
@@ -49,6 +73,17 @@ window.onload = function() {
         }
     });
 
+    windowD.addEventListener("click", function() {
+        if (texts.length < 2) return;
+        currentIndex++;
+        currentIndex %= texts.length;
+        windowD.classList.add("tuck");
+        setTimeout(function() {
+            loadFrame();
+            windowD.classList.remove("tuck");
+        }, 600);
+    });
+
     const projects = document.getElementById("projects");
     const members = document.getElementById("members");
     const meetings = document.getElementById("meetings")
@@ -62,7 +97,17 @@ window.onload = function() {
     });
 
     members.addEventListener("click", function() {
-        loadText("");
+        const henson = "<h1>Henson L.</h1><br>Henson is our current president and he started the club";
+        const paisley = "<h1>Paisley T.</h1><br>Paisley is our current vice president.";
+        const samuel = "<h1>Samuel D.</h1><br>Samuel is our secretary officer.";
+        const marcus = "<h1>Marcus W.</h1><br>Marcus is our public relations officer";
+        const sergio = "<h1>Sergio A.</h1><br>Sergio is our web master"
+        const siddhant = "<h1>Siddhant S.</h1><br>Siddhant is Sergio's trainee for the web master."
+
+        loadText(
+            [henson, paisley, samuel, marcus, sergio, siddhant],
+            ["images/Member/2Q.png", "images/Member/rando.jpeg", "images/Member/Sam.jpg", "images/Member/Marcus.png", "images/Member/Sergio.jpg", "images/Member/rando.jpeg"]
+        );
         windowBackground.style.display = "block";
         windowD.offsetHeight;
         windowD.classList.add("show");

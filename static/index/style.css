@@ -78,13 +78,16 @@ canvas {
     transform: translateY(0);
 }
 
+#windows.tuck {
+    transform: translateY(-200%);
+}
+
 #windows img {
     position: absolute;
-    height: 50%;
+    height: 60%;
     width: 45%;
     right: 5%;
     top: 15%;
-    filter: blur(2px);
 }
 
 #windows div {
