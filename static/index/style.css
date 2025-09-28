@@ -127,7 +127,7 @@ canvas {
     position: absolute;
     left: 0;
     top: 0;
-    height: 5%;
+    height: auto;
     width: 100%;
     z-index: 1;
     align-items: center;
@@ -158,12 +158,16 @@ canvas {
 }
 
 #top-bar .right-space h4 {
+    margin-top: 16px;
+    margin-bottom: 16px;
     margin-right: 16px;
     float: right;
 }
 
 #top-bar .left-space svg, h4 {
+    margin-top: 16px;
     margin-left: 16px;
+    margin-bottom: 16px;
     float: left;
 }
 
