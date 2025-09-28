@@ -18,33 +18,33 @@ canvas {
     z-index: -1;
 }
 
-.container {
+.content {
     position: absolute;
-    top: -5%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    z-index: 0;
+    background-color: black;
+    border-radius: 10px;
+    z-index: 5;
 }
 
-.container img {
-    display: block;
-}
-
-.container h1, h2, h3, h4 {
-    font-family: "Style Script", cursive;
-    font-style: italic;
+.content div {
     color: white;
-    text-align: center;
-    margin: 0;
-    z-index: 4;
+    font-size: 24px;
+    padding: 32px;
+    max-width: 40%;
+    float: left;
+    text-align: left;
+    font-family: "IBM Plex Sans", sans-serif;
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
+.content img {
+    display: flex;
+    max-width: 40%;
+    height: auto;
+    float: right;
+    margin: 32px;
+    border-radius: 10px;
+}
 #gas {
     position: absolute;
     bottom: 0;
@@ -81,6 +81,11 @@ canvas {
 
 #top-bar div {
     margin: 0;
+}
+
+#top-bar a {
+    text-decoration: none;
+    color: white;
 }
 
 #top-bar .left-space {

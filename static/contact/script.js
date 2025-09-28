@@ -7,17 +7,18 @@ const regularHeight = 995;
 let currentWidth;
 let currentHeight;
 
+function clamp(num, min, max) {
+    return Math.min(Math.max(num, min), max);
+}
+
 function loadSizes() {
     let vector1 = document.getElementById("vector1");
     const vector2 = document.getElementById("vector2");
-    const logo = document.querySelector(".container img");
-    
+    const content = document.querySelector(".content");
+
     if (vector1 === null) {
         vector1 = document.querySelectorAll("div canvas")[0];
     }
-
-    logo.style.width = currentWidth * 0.32 + "px";
-    logo.style.height = currentHeight * 0.16 + "px";
 
     vector1.style.width = currentWidth * 1.5 + "px";
     vector1.style.height = currentHeight + "px";
@@ -28,6 +29,11 @@ function loadSizes() {
     vector2.style.height = currentHeight + "px";
     vector2.style.left = -(currentWidth * 1.6 - window.innerWidth)/2 + "px";
     vector2.style.bottom = -currentHeight * 0.43 + "px";
+
+    content.style.width = clamp(currentWidth * 0.625, 0, window.innerWidth) + "px";
+    content.style.height = clamp(currentHeight * 0.625, 0, window.innerHeight) + "px";
+    content.style.top = ((window.innerHeight - document.getElementById("top-bar").offsetHeight) - parseInt(content.style.height))/2 + document.getElementById("top-bar").offsetHeight + "px";
+    content.style.left = (window.innerWidth - parseInt(content.style.width))/2 + "px";
 }
 
 window.onload = function() {
