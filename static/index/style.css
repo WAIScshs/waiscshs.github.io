@@ -147,45 +147,32 @@ canvas {
     align-items: center;
 }
 
-#top-bar h4, svg {
-    padding: 16px;
+#top-bar .left-space {
+    left: 0;
+    display: flex;
+    width: auto;
+    height: auto;
+    float: left;
 }
 
-#top-bar h4 {
-    position: absolute;
-    font-family: "IBM Plex Mono", monospace;
-    font-size: smaller;
-    color: white;
+#top-bar .right-space {
+    display: flex;
+    width: auto;
+    height: auto;
+    float: right;
 }
 
-#top-bar a {
-    position: absolute;
+#top-bar .right-space h4 {
+    margin-right: 10px;
+    margin-top: 16px;
+    padding-right: 10px;
+    float: right;
 }
 
-#top-bar svg{
-    position: absolute;
-    left: 0px;
-    top: 0px;
-}
-
-#github {
-    right: 80px;
-}
-
-#projects {
-    left: 50px;
-}
-
-#members {
-    left: 130px;
-}
-
-#meetings {
-    left: 210px;
-}
-
-#contact {
-    left: 290px;
+#top-bar .left-space svg, h4 {
+    margin-left: 10px;
+    margin-top: 16px;
+    float: left;
 }
 
 .ibm-plex-mono-thin {
