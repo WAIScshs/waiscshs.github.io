@@ -1,7 +1,3 @@
-let currentIndex = 0;
-let texts = []
-let images = []
-
 const regularWidth = 1920;
 const regularHeight = 995;
 let currentWidth;

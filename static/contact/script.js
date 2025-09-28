@@ -1,7 +1,3 @@
-let currentIndex = 0;
-let texts = []
-let images = []
-
 const regularWidth = 1920;
 const regularHeight = 995;
 let currentWidth;
@@ -86,4 +82,7 @@ window.onload = function() {
             .zoomBlur(parseInt(mouseX), parseInt(mouseY), 0.2)
             .update();
     });
+
+    const textBox = document.querySelector(".content div");
+    textBox.innerHTML = "<h1>Contact Info</h1><br>Mr. Wegscheid:<br>shaun.wegscheid@springbranchisd.com<br><br>Mrs. Wegscheid:<br>Cherly.Wegscheid@springbranchisd.com<br><br>Henson Liga:<br>ligahen000@mysbisd.org";
 }
