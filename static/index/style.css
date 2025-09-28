@@ -133,31 +133,36 @@ canvas {
     align-items: center;
 }
 
+#top-bar div {
+    margin: 0;
+}
+
 #top-bar .left-space {
-    left: 0;
+    top: auto;
     display: flex;
     width: auto;
     height: auto;
     float: left;
     align-items: center;
+    height: 100%;
 }
 
 #top-bar .right-space {
-    display: flex;
+    top: auto;
+    display: grid;
     width: auto;
     height: auto;
     float: right;
     align-items: center;
+    height: 100%;
 }
 
 #top-bar .right-space h4 {
-    margin-top: 32px;
     margin-right: 16px;
     float: right;
 }
 
 #top-bar .left-space svg, h4 {
-    margin-top: 32px;
     margin-left: 16px;
     float: left;
 }
