@@ -113,7 +113,7 @@ canvas {
     position: absolute;
     display: block;
     object-fit: fill;
-    width: 150vw;
+    width: 2880px;
     height: 100vh;
     left: -25vw;
     filter: saturate(100%);
@@ -121,7 +121,7 @@ canvas {
 
 #gas canvas {
     position: absolute;
-    width: 160vw;
+    width: 2880px;
     height: 100vh;
     left: -30vw;
     bottom: -25vh;

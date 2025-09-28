@@ -2,6 +2,11 @@ let currentIndex = 0;
 let texts = []
 let images = []
 
+const regularWidth = 1920;
+const regularHeight = 995;
+let currentWidth;
+let currentHeight;
+
 function loadText(text, image = ["images/Frame 31.png"]) {
     currentIndex = 0;
     if (Array.isArray(text)) {
@@ -21,6 +26,26 @@ function loadText(text, image = ["images/Frame 31.png"]) {
     loadFrame();
 }
 
+function loadSizes() {
+    let vector1 = document.getElementById("vector1");
+    const vector2 = document.getElementById("vector2");
+
+    if (vector1 === null) {
+        vector1 = document.querySelectorAll("div canvas")[0];
+        console.log(vector1);
+    }
+
+    vector1.style.width = currentWidth * 1.5 + "px";
+    vector1.style.height = currentHeight + "px";
+    vector1.style.left = -(currentWidth * 1.5 - window.innerWidth)/2 + "px";
+    vector1.style.bottom = -currentHeight * 0.25 + "px";
+
+    vector2.style.width = currentWidth * 1.6 + "px";
+    vector2.style.height = currentHeight + "px";
+    vector2.style.left = -(currentWidth * 1.6 - window.innerWidth)/2 + "px";
+    vector2.style.bottom = -currentHeight * 0.43 + "px";
+}
+
 function loadFrame() {
     document.getElementById("windowText").innerHTML = texts[currentIndex];
     document.getElementById("windowImage").src = images[currentIndex] === "" ? "images/Frame 31.png" : images[currentIndex];
@@ -36,6 +61,32 @@ function getNextMeeting(refDate, today) {
 }
 
 window.onload = function() {
+
+    currentWidth = window.innerWidth;
+    currentHeight = window.innerHeight;
+    if (currentHeight / regularHeight < currentWidth / regularWidth) {
+        currentHeight = currentWidth/regularWidth * regularHeight;
+    } else {
+        currentWidth = currentHeight/regularHeight * regularWidth;
+    }
+    currentHeight = parseInt(currentHeight);
+    currentWidth = parseInt(currentWidth);
+
+    window.addEventListener("resize", function() {
+        currentWidth = window.innerWidth;
+        currentHeight = window.innerHeight;
+        if (currentHeight / regularHeight < currentWidth / regularWidth) {
+            currentHeight = currentWidth/regularWidth * regularHeight;
+        } else {
+            currentWidth = currentHeight/regularHeight * regularWidth;
+        }
+        currentHeight = parseInt(currentHeight);
+        currentWidth = parseInt(currentWidth);
+        loadSizes();
+    });
+
+    setTimeout(loadSizes, 100);
+
     let mouseX = 0;
     let mouseY = 0;
 
