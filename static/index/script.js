@@ -37,8 +37,8 @@ function loadSizes() {
         vector1 = document.querySelectorAll("div canvas")[0];
     }
 
-    logo.style.width = currentHeight * 0.45 + "px";
-    logo.style.height = currentHeight * 0.45 * 0.3333 + "px";
+    logo.style.width = currentWidth * 0.32 + "px";
+    logo.style.height = currentHeight * 0.16 + "px";
 
     vector1.style.width = currentWidth * 1.5 + "px";
     vector1.style.height = currentHeight + "px";
