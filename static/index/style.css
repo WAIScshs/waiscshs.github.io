@@ -33,8 +33,6 @@ canvas {
 }
 
 .container img {
-    width: 35%;
-    height: auto;
     display: block;
 }
 

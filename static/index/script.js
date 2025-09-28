@@ -29,11 +29,16 @@ function loadText(text, image = ["images/Frame 31.png"]) {
 function loadSizes() {
     let vector1 = document.getElementById("vector1");
     const vector2 = document.getElementById("vector2");
+    const logo = document.querySelector(".container img");
 
+    
+    
     if (vector1 === null) {
         vector1 = document.querySelectorAll("div canvas")[0];
-        console.log(vector1);
     }
+
+    logo.style.width = currentHeight * 0.45 + "px";
+    logo.style.height = currentHeight * 0.45 * 0.3333 + "px";
 
     vector1.style.width = currentWidth * 1.5 + "px";
     vector1.style.height = currentHeight + "px";
