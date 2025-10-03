@@ -42,4 +42,6 @@ window.onload = function() {
     });
 
     setTimeout(loadSizes, 100);
+    const textBox = document.querySelector(".content div");
+    textBox.innerHTML = "<h1>Projects</h1><br>Projects are soon to come!";
 }
