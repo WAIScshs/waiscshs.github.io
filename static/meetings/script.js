@@ -52,7 +52,7 @@ window.onload = function() {
 
     setTimeout(loadSizes, 100);
 
-    const today = new Date();
+    const today = new Date(new Date().toDateString());
     const firstMeeting = new Date("2025-09-18");
     const nextMeetingDate = getNextMeeting(firstMeeting, today);
     const daysUntilMeeting = Math.ceil((nextMeetingDate - today) / (1000 * 60 * 60 * 24));
