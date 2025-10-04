@@ -19,18 +19,15 @@ canvas {
 }
 
 .content {
+    display: flex;
     position: absolute;
     background-color: black;
-    border-radius: 10px;
     z-index: 5;
     overflow: scroll;
     scrollbar-width: none;
-    width: 100%;
-    top: 10%;
-    height: 90%;
-    display: flex;
     flex-direction: row;
-    gap: 0.5vw;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .content h4, h5 {
@@ -44,13 +41,9 @@ canvas {
 .content div {
     color: white;
     font-size: 24px;
-    padding: 32px;
-    max-width: 40%;
     float: left;
     text-align: left;
     font-family: "IBM Plex Mono", monospace;
-    overflow: scroll;
-    scrollbar-width: none;
 }
 
 .content img {
@@ -151,6 +144,7 @@ canvas {
     padding: 0;
     color: white;
     text-align: center;
+    overflow: scroll;
 }
 
 .ibm-plex-mono-thin {

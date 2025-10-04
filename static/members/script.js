@@ -10,9 +10,9 @@ function clamp(num, min, max) {
 function loadSizes() {
     const content = document.querySelector(".content");
 
-    content.style.width = clamp(currentWidth * 0.625, 0, window.innerWidth) + "px";
-    content.style.height = clamp(currentHeight * 0.625, 0, window.innerHeight) + "px";
-    content.style.top = ((window.innerHeight - document.getElementById("top-bar").offsetHeight) - parseInt(content.style.height))/2 + document.getElementById("top-bar").offsetHeight + "px";
+    content.style.width = clamp(currentWidth * 0.5, 0, window.innerWidth) + "px";
+    content.style.height = clamp(currentHeight - document.getElementById("top-bar").offsetHeight * 2, 0, window.innerHeight) + "px";
+    content.style.top = document.getElementById("top-bar").offsetHeight + "px";
     content.style.left = (window.innerWidth - parseInt(content.style.width))/2 + "px";
 }
 
