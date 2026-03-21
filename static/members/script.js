@@ -17,46 +17,39 @@ function loadSizes() {
 }
 
 function members() {
-    fetch("keys.json")
-        .then(response => response.json())
-        .then(data => {
-            const url = `https://sheets.googleapis.com/v4/spreadsheets/${data.sheet_id}/values/Members!A:D?key=${data.key}`;
-            fetch(url)
-                .then(res => res.json())
-                .then(cells => {
-                    let rows = cells.values.splice(1);
-                    const content = document.querySelector(".content");
-                    for (let row of rows) {
-                        const container = document.createElement("div");
-                        container.className = "person-container";
+    const url = `https://sheets.wais-cshs.workers.dev/Members`;
+    fetch(url)
+        .then(res => res.json())
+        .then(cells => {
+            let rows = cells.values.splice(1);
+            const content = document.querySelector(".content");
+            for (let row of rows) {
+                const container = document.createElement("div");
+                container.className = "person-container";
 
-                        const image = document.createElement("img");
-                        image.className = "person-image";
-                        const id = new URLSearchParams(row[3]).get("https://drive.google.com/open?id");
-                        console.log(row[3], id);
-                        image.src = `https://drive.google.com/thumbnail?id=${id}&sz=s800`;
-                        image.alt = row[1];
+                const image = document.createElement("img");
+                image.className = "person-image";
+                const id = new URLSearchParams(row[3]).get("https://drive.google.com/open?id");
+                console.log(row[3], id);
+                image.src = `https://drive.google.com/thumbnail?id=${id}&sz=s800`;
+                image.alt = row[1];
 
-                        const name = document.createElement("h4");
-                        name.className = "ibm-plex-mono-bold";
-                        name.innerText = row[1];
+                const name = document.createElement("h4");
+                name.className = "ibm-plex-mono-bold";
+                name.innerText = row[1];
 
-                        const role = document.createElement("h5");
-                        role.className = "ibm-plex-mono-extralight";
-                        role.innerText = row[2];
+                const role = document.createElement("h5");
+                role.className = "ibm-plex-mono-extralight";
+                role.innerText = row[2];
 
-                        container.appendChild(image);
-                        container.appendChild(name);
-                        container.appendChild(role);
+                container.appendChild(image);
+                container.appendChild(name);
+                container.appendChild(role);
 
-                        content.appendChild(container);
-                    }
-                })
-                .catch(err => console.error(err));
+                content.appendChild(container);
+            }
         })
-        .catch(error => {
-            console.error(error);
-        });
+        .catch(err => console.error(err));
 }
 
 window.onload = function() {

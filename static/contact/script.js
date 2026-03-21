@@ -17,27 +17,20 @@ function loadSizes() {
 }
 
 function contact() {
-    fetch("keys.json")
-        .then(response => response.json())
-        .then(data => {
-            const url = `https://sheets.googleapis.com/v4/spreadsheets/${data.sheet_id}/values/Contact!A:B?key=${data.key}`;
-            fetch(url)
-                .then(res => res.json())
-                .then(cells => {
-                    const textBox = document.querySelector(".content div");
-                    let text = "<h1>Contact Info</h1>";
-                    let rows = cells.values.splice(1);
+    const url = `https://sheets.wais-cshs.workers.dev/Contact`;
+    fetch(url)
+        .then(res => res.json())
+        .then(cells => {
+            const textBox = document.querySelector(".content div");
+            let text = "<h1>Contact Info</h1>";
+            let rows = cells.values.splice(1);
 
-                    for (let row of rows) {
-                        text += `<br>${row[0]}:<br>${row[1]}<br><br>`
-                    }
-                    textBox.innerHTML = text;
-                })
-                .catch(err => console.error(err));
+            for (let row of rows) {
+                text += `<br>${row[0]}:<br>${row[1]}<br><br>`
+            }
+            textBox.innerHTML = text;
         })
-        .catch(error => {
-            console.error(error);
-        });
+        .catch(err => console.error(err));
 }
 
 window.onload = function() {
