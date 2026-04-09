@@ -38,17 +38,16 @@ function schedule() {
 
             const textBox = document.querySelector(".content div");
             textBox.innerHTML = `<h1>Meeting Schedule</h1>Our next meeting is on ${nextMeetingDate.toLocaleDateString()}<br><br>${daysUntilMeeting} days till the next meeting<br><br>We meet in room A125 from 3:30 - 4:30`;
+            const loading = document.querySelector(".loading");
+            loading.style.animation = "fadeOut 2s ease-out";
+            loading.addEventListener("animationend", function() {
+                loading.remove();
+            });
         })
         .catch(err => console.error(err));
 }
 
 window.onload = function() {
-
-    const loading = document.querySelector(".loading");
-    loading.style.animation = "fadeOut 2s ease-out";
-    loading.addEventListener("animationend", function() {
-        loading.remove();
-    });
 
     currentWidth = window.innerWidth;
     currentHeight = window.innerHeight;

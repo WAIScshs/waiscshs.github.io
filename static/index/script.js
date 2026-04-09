@@ -32,12 +32,6 @@ function loadSizes() {
 
 window.onload = function() {
 
-    const loading = document.querySelector(".loading");
-    loading.style.animation = "fadeOut 2s ease-out";
-    loading.addEventListener("animationend", function() {
-        loading.remove();
-    });
-
     currentWidth = window.innerWidth;
     currentHeight = window.innerHeight;
     if (currentHeight / regularHeight < currentWidth / regularWidth) {
@@ -85,5 +79,11 @@ window.onload = function() {
         canvas.draw(texture)
             .zoomBlur(parseInt(mouseX), parseInt(mouseY), 0.2)
             .update();
+    });
+
+    const loading = document.querySelector(".loading");
+    loading.style.animation = "fadeOut 2s ease-out";
+    loading.addEventListener("animationend", function() {
+        loading.remove();
     });
 }

@@ -29,17 +29,16 @@ function contact() {
                 text += `<br>${row[0]}:<br>${row[1]}<br><br>`
             }
             textBox.innerHTML = text;
+            const loading = document.querySelector(".loading");
+            loading.style.animation = "fadeOut 2s ease-out";
+            loading.addEventListener("animationend", function() {
+                loading.remove();
+            });
         })
         .catch(err => console.error(err));
 }
 
 window.onload = function() {
-
-    const loading = document.querySelector(".loading");
-    loading.style.animation = "fadeOut 2s ease-out";
-    loading.addEventListener("animationend", function() {
-        loading.remove();
-    });
 
     currentWidth = window.innerWidth;
     currentHeight = window.innerHeight;
