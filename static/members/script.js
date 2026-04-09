@@ -48,6 +48,11 @@ function members() {
 
                 content.appendChild(container);
             }
+            const loading = document.querySelector(".loading");
+            loading.style.animation = "fadeOut 3s ease-out";
+            loading.addEventListener("animationend", function() {
+                loading.remove();
+            });
         })
         .catch(err => console.error(err));
 }
