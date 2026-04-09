@@ -20,27 +20,20 @@ function loadSizes() {
 }
 
 function projects() {
-    fetch("keys.json")
-        .then(response => response.json())
-        .then(data => {
-            const url = `https://sheets.googleapis.com/v4/spreadsheets/${data.sheet_id}/values/Projects!A:E?key=${data.key}`;
-            fetch(url)
-                .then(res => res.json())
-                .then(cells => {
-                    let rows = cells.values.splice(1);
-                    console.log(rows);
-                    _projects = rows;
-                    if (_projects.length > 0) {
-                        document.querySelector(".content div").innerHTML = `<h1>${rows[0][1]}</h1><br>${rows[0][2]}<br>${rows[0][4]}`;
-                        document.querySelector(".content img").src = rows[0][3] || "images/Frame 31.png";
-                        document.querySelector(".content p").innerHTML = `${counter + 1}/${rows.length}`;
-                    }
-                })
-                .catch(err => console.error(err));
+    const url = `https://sheets.wais-cshs.workers.dev/Projects`;
+    fetch(url)
+        .then(res => res.json())
+        .then(cells => {
+            let rows = cells.values.splice(1);
+            console.log(rows);
+            _projects = rows;
+            if (_projects.length > 0) {
+                document.querySelector(".content div").innerHTML = `<h1>${rows[0][1]}</h1><br>${rows[0][2]}<br>${rows[0][4]}`;
+                document.querySelector(".content img").src = rows[0][3] || "images/Frame 31.png";
+                document.querySelector(".content p").innerHTML = `${counter + 1}/${rows.length}`;
+            }
         })
-        .catch(error => {
-            console.error(error);
-        });
+        .catch(err => console.error(err));
 }
 
 function changeCounter() {
