@@ -44,6 +44,12 @@ function schedule() {
 
 window.onload = function() {
 
+    const loading = document.querySelector(".loading");
+    loading.style.animation = "fadeOut 2s ease-out";
+    loading.addEventListener("animationend", function() {
+        loading.remove();
+    });
+
     currentWidth = window.innerWidth;
     currentHeight = window.innerHeight;
     if (currentHeight / regularHeight < currentWidth / regularWidth) {
