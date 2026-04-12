@@ -23,6 +23,7 @@ function members() {
         .then(cells => {
             let rows = cells.values.splice(1);
             const content = document.querySelector(".content");
+            let lastImage = null;
             for (let row of rows) {
                 const container = document.createElement("div");
                 container.className = "person-container";
@@ -46,12 +47,17 @@ function members() {
                 container.appendChild(name);
                 container.appendChild(role);
 
+                lastImage = image;
+
                 content.appendChild(container);
             }
-            const loading = document.querySelector(".loading");
-            loading.style.animation = "fadeOut 3s ease-out";
-            loading.addEventListener("animationend", function() {
-                loading.remove();
+
+            lastImage.addEventListener("load", function() {
+                const loading = document.querySelector(".loading");
+                loading.style.animation = "fadeOut 3s ease-out";
+                loading.addEventListener("animationend", function() {
+                    loading.remove();
+                });
             });
         })
         .catch(err => console.error(err));
