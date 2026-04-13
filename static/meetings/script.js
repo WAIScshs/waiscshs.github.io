@@ -37,7 +37,7 @@ function schedule() {
             const daysUntilMeeting = Math.ceil((nextMeetingDate - today) / (1000 * 60 * 60 * 24));
 
             const textBox = document.querySelector(".content div");
-            textBox.innerHTML = `<h1>Meeting Schedule</h1>Our next meeting is on ${nextMeetingDate.toLocaleDateString()}<br><br>${daysUntilMeeting} days till the next meeting<br><br>We meet in room A125 from 3:30 - 4:30`;
+            textBox.innerHTML = `<h1>Meeting Schedule</h1>Our next meeting is on ${nextMeetingDate.toLocaleDateString()}<br><br>${daysUntilMeeting} day(s) till the next meeting<br><br>We meet in room A125 from 3:30 - 4:30`;
             const loading = document.querySelector(".loading");
             loading.style.animation = "fadeOut 2s ease-out";
             loading.addEventListener("animationend", function() {
