@@ -16,8 +16,8 @@ function loadSizes() {
     content.style.left = (window.innerWidth - parseInt(content.style.width))/2 + "px";
 }
 
-function members() {
-    const url = `https://sheets.wais-cshs.workers.dev/Members`;
+function officers() {
+    const url = `https://sheets.wais-cshs.workers.dev/Officers`;
     fetch(url)
         .then(res => res.json())
         .then(cells => {
@@ -90,5 +90,5 @@ window.onload = function() {
 
     setTimeout(loadSizes, 100);
 
-    members();
+    officers();
 }
